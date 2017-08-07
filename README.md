@@ -5,8 +5,9 @@
 * 非常驻，定时每分钟执行一次
 * 警报存在延迟
 * 最简单，配置 config.py 即可
+* Aliyun 官方 Python SDK 有问题，无法获取 dimensions 信息
 
-## v1: python alarm-realtime.py
+## v2: python alarm-realtime.py
 
 * 常驻
 * 警报几乎不存在延迟
