@@ -4,8 +4,9 @@ from slacker import Slacker
 from aliyunsdkcore.client import AcsClient
 from aliyunsdkcms.request.v20170301.ListAlarmHistoryRequest import ListAlarmHistoryRequest
 from aliyunsdkcms.request.v20170301.ListAlarmRequest import ListAlarmRequest
+from utils import post_slack
 
-from config import SLACK_TOKEN, SLACK_CHANNEL, AKId, AKSecret, REGION
+from config import SLACK_TOKEN, AKId, AKSecret, REGION
 
 client = AcsClient(AKId, AKSecret, REGION)
 slack = Slacker(SLACK_TOKEN)
@@ -25,15 +26,6 @@ def get_alarm(alarm_id):
     request.set_Namespace('acs_ecs_dashboard')
     response = client.do_action_with_exception(request)
     return json.loads(response)['AlarmList']
-
-
-def post_slack(subject, body, color):
-    obj = slack.chat.post_message(
-        channel=SLACK_CHANNEL,
-        text='test',
-        as_user=False,
-        attachments=[{"pretext": subject, "text": body, "color": color}])
-    return obj.successful
 
 
 def run():
