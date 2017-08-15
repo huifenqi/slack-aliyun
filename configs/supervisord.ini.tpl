@@ -1,4 +1,4 @@
-[program:slack-aliyun]
+[program:python-alarm-realtime]
 environment=NEW_RELIC_CONFIG_FILE=/data/www/slack-aliyun/configs/newrelic.ini
 directory=/data/www/slack-aliyun/configs
 command=newrelic-admin run-program /usr/bin/python /data/www/slack-aliyun/alarm-realtime.py
