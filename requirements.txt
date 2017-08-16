@@ -1,3 +1,4 @@
-slacker=0.9.50
-aliyun-python-sdk-core=2.3.5
-aliyun-python-sdk-cms=5.0.0
+slacker==0.9.50
+aliyun-python-sdk-core==2.3.5
+aliyun-python-sdk-cms==5.0.0
+http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/32305/cn_zh/1490269182462/aliyun-mns-python-sdk-1.1.4.zip
